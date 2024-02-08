@@ -1,0 +1,133 @@
+body {
+  background-color: black;
+}
+
+.my_picture{
+    width:100%;
+    position: relative;
+}
+
+.snip1376 {
+  font-family: 'Quattrocento', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  color: #141414;
+  text-align: center;
+  line-height: 1.4em;
+  font-size: 16px;
+  padding-top: 170px;
+}
+.snip1376 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.snip1376 img {
+  max-width: 100%;
+  vertical-align: top;
+}
+.snip1376 figcaption {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 15px 25px 65px;
+  position: relative;
+}
+.snip1376 figcaption:before {
+  position: absolute;
+  content: '';
+  z-index: 1;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-image: -webkit-linear-gradient(top, transparent 0%, #ffffff 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
+}
+
+.snip1376 h2{margin-bottom:10px;}
+.snip1376 h2 {
+  font-weight: 300;
+  font-size: 2em;
+  line-height: 1.7em;
+  font-family: 'Oswald', Arial, sans-serif;
+  text-transform: uppercase;
+}
+.snip1376 p {
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.snip1376 p i {
+  margin-bottom: 10px;
+}
+
+/* SNSアイコン */
+.social-icons .fa{
+  font-size: 1.8em;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #FFF;
+	color: rgba(255, 255, 255, 0.8);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.fa-facebook{background-color:#3C599F;} 
+.fa-twitter{background-color:#32CCFE;}  
+.fa-youtube{background-color:#df3939;}
+.fa-instagram{background-color:#FF0084;}
+
+.social-icons .fa:hover{
+	color: #FFF;
+	-webkit-box-shadow: 1px 1px 3px #333;
+	-moz-box-shadow: 1px 1px 3px #333;
+	box-shadow: 1px 1px 3px #333; 
+}
+
+.fa-cake-candles{margin-right: 7px;}
+.fa-location-dot{margin-right: 7px;}
+.fa-briefcase{margin-right: 7px;}
+
+main {
+	background-color: white;
+	text-align: center;
+}
+
+.about_me{
+  line-height: 28px;
+}
+
+/* スマホ向けレイアウト */
+@media all and (max-width: 670px) {
+
+.haikei {
+  width:100%;
+  height:100%;
+}
+
+.submessage {
+  margin:20px;
+}
+
+.submessage br {
+  display:none;
+}
+
+.snip1376{
+  padding-top: 60px;
+}
+}
+
+@media all and (max-width: 365px) {
+  .snip1376 figcaption {
+    padding: 0px;
+  }
+}

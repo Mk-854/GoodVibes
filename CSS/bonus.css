@@ -1,0 +1,297 @@
+body {
+  background-color: #000;
+  height: 100%;
+  margin: 0px;
+}
+
+.wrapper{
+  padding-top: 100px;
+  margin-bottom: 100px;
+  height: 900px;
+}
+
+@-webkit-keyframes slide-in-elliptic-bottom-fwd {
+  0% {
+    -webkit-transform: translateY(600px) rotateX(30deg) scale(0);
+    transform: translateY(600px) rotateX(30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% -1400px;
+    transform-origin: 50% -1400px;
+    opacity: 1;
+  }
+}
+@keyframes slide-in-elliptic-bottom-fwd {
+  0% {
+    -webkit-transform: translateY(600px) rotateX(30deg) scale(0);
+    transform: translateY(600px) rotateX(30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% -1400px;
+    transform-origin: 50% -1400px;
+    opacity: 1;
+  }
+}
+@keyframes steam {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+.article{
+  margin-top: 40px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+/* カード */
+.cardpack--container {
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  width: 300px;
+  height: 450px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 200px;
+  animation: slide-in-elliptic-bottom-fwd 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+
+.cardpack--container .glow {
+  z-index: 1;
+  position: absolute;
+  width: 300px;
+  height: 450px;
+  background: linear-gradient(0deg, #000, #272727);
+}
+
+.cardpack--container .glow:before, .cardpack--container .glow:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(35deg, #b118ac, #4c4cff, #e69500, #b118ac, #4c4cff, #e69500);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+.cardpack--container .glow:after {
+    filter: blur(50px);
+}
+
+.glow2:before,.glow2:after{
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(35deg, #b118ac, #4c4cff, #e69500, #b118ac, #4c4cff, #e69500);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+  border-radius: 5%/3.5%;
+}
+
+.glow2.active:before,.glow2.active:after{content: "";}
+
+.glow2:after{filter: blur(50px);}
+
+.cardpackButton {
+  background: linear-gradient(0deg, #000, #272727);
+  position: absolute;
+  z-index: 3;
+  width: 300px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.GetCardImg{width: 200px;}
+.AgainImg{width: 180px;}
+
+.appear{
+  display: block;
+  z-index:3;
+  animation: slide-in-elliptic-bottom-fwd 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.disappear{display:none;}
+
+.displayblock{
+  display: block;
+  z-index: 3;
+}
+.opacity{opacity: 0;}
+
+/* カード */
+:root {
+  --color1: rgb(0, 231, 255);
+  --color2: rgb(255, 0, 231);
+}
+
+.card_img{
+  width:300px;
+  height:450px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  object-fit: cover;
+  border-radius: 5%/3.5%;
+  box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease, box-shadow 0.2s ease;
+  will-change: transform, filter;
+  filter: brightness(1.25) contrast(1);
+}
+
+.card{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.card:before,
+.card:after {
+  height: 450px;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 0.5;
+  mix-blend-mode: color-dodge;
+  transition: all 0.33s ease;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 300% 300%;
+  background-image: linear-gradient(115deg, transparent 0%, var(--color1) 25%, transparent 47%, transparent 53%, var(--color2) 75%, transparent 100%);
+}
+
+.card:before {
+  filter: brightness(0.5) contrast(1);
+  z-index: 1;
+}
+
+.card:after {
+  opacity: 1;
+  background-image: url("https://assets.codepen.io/13471/sparkles.gif"), url(https://assets.codepen.io/13471/holo.png), linear-gradient(125deg, #ff008450 15%, #fca40040 30%, #ffff0030 40%, #00ff8a20 60%, #00cfff40 70%, #cc4cfa50 85%);
+  background-size: 160%;
+  background-blend-mode: overlay;
+  z-index: 2;
+  filter: brightness(1) contrast(1);
+  opacity: 0.75;
+}
+
+.card.active:after,
+.card:hover:after {
+  filter: brightness(1) contrast(1);
+  opacity: 1;
+}
+
+.holo{
+  position: absolute;
+  width: 300px;
+  height: 450px;
+  z-index: 1;
+  opacity: 0.25;
+  filter: brightness(1) contrast(1);
+}
+
+.card.animated {
+  transition: none;
+  animation: holoCard 12s ease 0s 1;
+}
+.card.animated:before {
+  transition: none;
+  animation: holoGradient 12s ease 0s 1;
+}
+.card.animated:after {
+  transition: none;
+  animation: holoSparkle 12s ease 0s 1;
+}
+
+@keyframes holoSparkle {
+  0%, 100% {
+    opacity: 0.75;
+    background-position: 50% 50%;
+    filter: brightness(1.2) contrast(1.25);
+  }
+  5%, 8% {
+    opacity: 1;
+    background-position: 40% 40%;
+    filter: brightness(0.8) contrast(1.2);
+  }
+  13%, 16% {
+    opacity: 0.5;
+    background-position: 50% 50%;
+    filter: brightness(1.2) contrast(0.8);
+  }
+  35%, 38% {
+    opacity: 1;
+    background-position: 60% 60%;
+    filter: brightness(1) contrast(1);
+  }
+  55% {
+    opacity: 0.33;
+    background-position: 45% 45%;
+    filter: brightness(1.2) contrast(1.25);
+  }
+}
+@keyframes holoGradient {
+  0%, 100% {
+    opacity: 0.5;
+    background-position: 50% 50%;
+    filter: brightness(0.5) contrast(1);
+  }
+  5%, 9% {
+    background-position: 100% 100%;
+    opacity: 1;
+    filter: brightness(0.75) contrast(1.25);
+  }
+  13%, 17% {
+    background-position: 0% 0%;
+    opacity: 0.88;
+  }
+  35%, 39% {
+    background-position: 100% 100%;
+    opacity: 1;
+    filter: brightness(0.5) contrast(1);
+  }
+  55% {
+    background-position: 0% 0%;
+    opacity: 1;
+    filter: brightness(0.75) contrast(1.25);
+  }
+}
+@keyframes holoCard {
+  0%, 100% {transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);}
+  5%, 8% {transform: rotateZ(0deg) rotateX(6deg) rotateY(-20deg);}
+  13%, 16% {transform: rotateZ(0deg) rotateX(-9deg) rotateY(32deg);}
+  35%, 38% {transform: rotateZ(3deg) rotateX(12deg) rotateY(20deg);}
+  55% {transform: rotateZ(-3deg) rotateX(-12deg) rotateY(-27deg);}
+}
+
+/* スマホ向けレイアウト */
+@media all and (max-width: 670px) {
+  main{height: 700px;}
+  .cardpack--container {margin-top: 60px;}
+}

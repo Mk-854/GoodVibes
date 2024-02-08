@@ -1,0 +1,131 @@
+main{
+  padding-top: 200px;
+}
+@media all and (max-width: 670px) {
+  main{
+    padding-top: 70px;
+  }
+}
+
+main h1 {
+  text-align: center;
+  margin:40px 0px;
+  font-size:40px;
+}
+
+.article {
+  text-align: center;
+  margin: 0px 20px;
+}
+
+.fa-envelope{
+  font-size: 50px;
+  margin-right: 10px;
+}
+
+.WORD{font-size: 40px;}
+
+.contact {
+    width: 960px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.contact-ttl {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-table {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+.contact-item,
+.contact-body {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.contact-item {
+    text-align: left;
+    width: 30%;
+    background-color: #eee;
+}
+
+.contact-body {width: 70%;}
+
+.form-text {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    max-width: 400px;
+}
+
+.form-select {
+    width: 180px;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.contact-submit {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 100vh;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.must_need{
+  margin-left :40px;
+  font-size: 12px;
+  padding: 4px 8px 3px;
+  color: #fff;
+  background-color: #ee6557;
+}
+
+/* スマホ向けレイアウト */
+@media all and (max-width: 670px) {
+  
+main h1 {font-size:30px;}
+
+.contact {
+    width: 95%;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.must_need{
+  margin-left :10px;
+  display: inline-block;
+}
+}

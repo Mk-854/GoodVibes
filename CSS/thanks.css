@@ -1,0 +1,43 @@
+main{
+  padding-top: 200px;
+}
+@media all and (max-width: 670px) {
+main{
+  padding-top: 100px;
+}
+}
+
+main {
+	background-color: white;
+	text-align: center;
+}
+
+.check_icon{
+  width: 60px;
+  margin: 0px 10px;
+}
+
+main h1 {
+  margin:40px 0px;
+  font-size:50px;
+}
+
+.article{margin-bottom: 60px;}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+/* スマホ向けレイアウト */
+@media all and (max-width: 670px) {
+ main h1 {font-size:40px;}
+
+.newslist_wrapper {
+  width:auto;
+  margin: 0px;
+  margin-bottom:90px;
+}
+}

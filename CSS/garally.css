@@ -1,0 +1,67 @@
+html,body {
+	height: 100%;	/* gray_layer（半透明レイヤー）をブラウザ画面全体に広げるため、親要素を全部100%にする */
+}
+
+main{
+	padding-top: 200px;  
+	height: 100%;
+  margin: 50px;
+}
+
+@media all and (max-width: 670px) {
+main{padding-top: 70px;}
+}
+
+/* モーダルウィンドウ */
+.imgs_container {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+	justify-content: space-evenly;
+}
+
+.imgs_container li {
+  margin: 10px;
+}
+
+#glay_layer {
+	display: none;
+	position: fixed;	/* 位置を固定 */
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.70;
+	z-index: 98;
+}
+
+#over_layer {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 99;
+}
+
+/*タブレット向けレイアウト*/
+@media all and (max-width: 1000px) {}
+
+/* スマホ向けレイアウト */
+@media all and (max-width: 670px) {
+}
+
+/* 620pxのタイミングで画像が一列になる為そちらの調整CSS */
+@media all and (max-width: 620px) {
+	.imgs_container li,.imgs_container li img{
+		width: 100%;
+	}
+
+	main{
+		margin: 30px;
+	}
+	#over_layer,#over_layer img{
+		width: 100%;
+	}
+}

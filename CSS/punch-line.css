@@ -1,0 +1,252 @@
+footer {
+  width: 100%;
+}
+
+.wrapper{
+  width: 100vw;
+  background-color: #f2f0f0;
+}
+#app{
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #f2f0f0;
+}
+.searchBoxWrapper{
+  text-align: center;
+}
+.searchBox{
+  width: 400px;
+  height: 50px;
+  border: none;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+}
+input[type="text"]:focus {
+  border: 1px solid #b4b3b1;
+  outline: 0;
+}
+.cardWrapper{
+  display: flex; 
+  flex-wrap:wrap; 
+  width: 100%; 
+  margin: auto;
+}
+.card{
+  max-width:300px;
+  min-width: 300px;
+  height: 450px;
+  background-color: white;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+  overflow: hidden;
+  position: relative;
+}
+.card:last-child{
+  margin-bottom: 50px;
+}
+.icon{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 170px;
+  left: 100px;
+  border-radius: 50%;
+  border: 3px solid rgb(255, 255, 255);
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+  overflow: hidden;
+}
+.songName{
+  position: absolute;
+  left: 5px;
+  font-size: 14px;
+  color: white;
+  text-shadow: 0 0 3px rgb(0 0 0 / 70%), 0 0 3px rgb(0 0 0 / 70%), 0 0 3px rgb(0 0 0 / 70%), 0 0 3px rgb(0 0 0 / 70%), 0 0 3px rgb(0 0 0 / 70%);
+}
+.imgWrapper{
+  height: 50%;
+  background-color: #b4b3b1;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+}
+.article{
+  height: 50%;
+  text-align: center;
+}
+.lyrics{
+  font-size: 13px;
+  padding: 10px;
+  white-space: pre-wrap;
+  color: #555;
+}
+
+/* Modal */
+button {
+  font-size: 30px;
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.modal__overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal__container {
+  max-width: 500px;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .modal__title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.25;
+} */
+.modal__content {
+  /* margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5; */
+}
+
+.modal__close::before {content: "\2715";}
+
+/* Animation */
+@keyframes mmfadeIn {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes mmfadeOut {
+  from {
+      opacity: 1;
+  }
+
+  to {
+      opacity: 0;
+  }
+}
+
+@keyframes mmslideIn {
+  from {
+      transform: translateY(10%);
+  }
+
+  to {
+      transform: translateY(0);
+  }
+}
+
+@keyframes mmslideOut {
+  from {
+      transform: translateY(0);
+  }
+
+  to {
+      transform: translateY(-10%);
+  }
+}
+
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+  animation: mmfadeIn 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+  animation: mmslideIn 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+  animation: mmfadeOut 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+  animation: mmslideOut 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: transform;
+}
+
+.sp-ArtistImg{
+  max-width: 500px;
+}
+.sp{display: none;}
+
+.sentence{
+  padding: 40px;
+  padding-top: 240px;
+  text-align: center;
+}
+@media all and (max-width: 670px) {
+  .sentence{
+    padding-bottom: 0px;
+    padding-top: 100px;
+  }
+}
+@media all and (max-width: 670px) {
+  #app{
+    text-align: center;
+  }
+  .searchBox{
+    width: 90%;
+    margin-bottom: 0px;
+  }
+  .modal__container {
+    max-width: 80%;
+  }
+  .sp-ArtistImg,.sp-AlbumImg{
+    max-width: 100%;
+  }
+  .sp{
+    display: block;
+  }
+}
+
+.MIX_title{
+  font-size: 35px;
+}
+.explain{
+  margin: 10px;
+  color: #888;
+}
+.PunchLineIcon{
+  width: 50px;
+  margin: 5px 5px -5px 5px;
+}
