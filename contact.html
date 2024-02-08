@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>GOOD VIBES</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+	<link rel="stylesheet" href="./CSS/common.css">
+    <link rel="stylesheet" href="./CSS/contact.css">
+    <script src="https://kit.fontawesome.com/e5b586f23b.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+  <div id="loader-bg">
+    <div id="loader">
+      <div class="sk-cube-grid">
+        <div class="sk-cube sk-cube1"></div>
+        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-cube sk-cube3"></div>
+        <div class="sk-cube sk-cube4"></div>
+        <div class="sk-cube sk-cube5"></div>
+        <div class="sk-cube sk-cube6"></div>
+        <div class="sk-cube sk-cube7"></div>
+        <div class="sk-cube sk-cube8"></div>
+        <div class="sk-cube sk-cube9"></div>
+      </div>
+    </div>
+  </div>
+  <div id="wrap">
+    <header class="header"><a href="index.html"><img src="./images/logo.png"></a></header>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="globalMenuSp">
+      <ul>
+        <li><a href="about.html">ABOUT THIS SITE</a></li>
+        <li><a href="me.html">ABOUT ME</a></li>
+        <li><a href="rappers.html">RAPPERS</a></li>
+        <li><a href="garally.html">GARALLY</a></li>
+        <li><a href="punch-line.html">PUNCH LINE</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+	    <li style="text-shadow: 0 0 10px #fff,0 0 15px #fff;"><a href="bonus.html">BONUS CONTENTS</a></li>
+      </ul>
+    </nav>
+	<nav class="gnav">
+	  <ul class="gnav_wrapper">
+		<li><a href="about.html">ABOUT THIS SITE</a></li>
+		<li><a href="me.html">ABOUT ME</a></li>
+		<li><a href="rappers.html">RAPPERS</a></li>
+		<li><a href="garally.html">GARALLY</a></li>
+		<li><a href="punch-line.html">PUNCH LINE</a></li>
+		<li><a href="contact.html">CONTACT</a></li>
+		<li style="text-shadow: 0 0 10px #fff,0 0 15px #fff;"><a href="bonus.html">BONUS CONTENTS</a></li>
+	  </ul>
+	</nav>
+    <main>
+      <h1 class="WORD"><i class="fa-solid fa-envelope"></i>CONTACT</h1>
+      <body>
+        <p class="article">サイトに対してのご要望やお問い合わせなど御座いましたら、こちらからご連絡お願い致します。</p>
+        <div class="contact">
+          <form action="https://api.staticforms.xyz/submit" method="post">
+            <table class="contact-table">
+              <tr>
+                <th class="contact-item">お名前<span class="must_need">必須</span></th> 
+                <td class="contact-body"><input type="text" name="name" class="form-text" /></td>
+              </tr>
+              <tr>
+                <th class="contact-item">フリガナ</th>
+                <td class="contact-body"><input type="text" name="name" class="form-text" /></td>
+              </tr>
+              <tr>
+                <th class="contact-item">メール<span class="must_need">必須</span></th>
+                <td class="contact-body"><input type="email" name="email" class="form-text" /></td></tr>
+              <tr>
+                <th class="contact-item">電話番号</th>
+                <td class="contact-body"><input type="tel" name="phone" class="form-text" /></td>
+              </tr>
+              <tr>
+                <th class="contact-item">お問い合わせ内容<span class="must_need">必須</span></th>
+                <td class="contact-body">
+                  <textarea name="message" class="form-textarea"></textarea>
+                </td>
+              </tr>
+            </table>
+            <input type="text" name="honeypot" style="display:none">
+            <input type="hidden" name="accessKey" value="3e72633d-cebb-489e-961b-fabe5be0f1dc">
+            <input type="hidden" name="subject" value="HIPHOPサイトお問い合わせ" />
+            <input type="hidden" name="replyTo" value="dqdmp0711@gmail.com">
+            <input type="hidden" name="redirectTo" value="https://muneguchikokoro.github.io/hiphop/thanks.html">
+            <input class="contact-submit" type="submit" value="送信" />
+          </form>
+        </div>
+      </body>
+    </main>
+    <footer><p>copyright ©️ 2024 DJ NULL</p></footer>
+  </div>
+  <script src="./JavaScript/contact.js"></script>
+</body>
+</html>

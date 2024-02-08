@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    	
+    <title>GOOD VIBES</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+	<link rel="stylesheet" href="./CSS/common.css">
+    <link rel="stylesheet" href="./CSS/punch-line.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="loader-bg">
+        <div id="loader">
+        <div class="sk-cube-grid">
+        <div class="sk-cube sk-cube1"></div>
+        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-cube sk-cube3"></div>
+        <div class="sk-cube sk-cube4"></div>
+        <div class="sk-cube sk-cube5"></div>
+        <div class="sk-cube sk-cube6"></div>
+        <div class="sk-cube sk-cube7"></div>
+        <div class="sk-cube sk-cube8"></div>
+        <div class="sk-cube sk-cube9"></div>
+        </div>
+        </div>
+    </div>
+
+  <div id="wrap">
+    <header class="header"><a href="index.html"><img src="./images/logo.png"></a></header>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="globalMenuSp">
+        <ul>
+          <li><a href="about.html">ABOUT THIS SITE</a></li>
+          <li><a href="me.html">ABOUT ME</a></li>
+          <li><a href="rappers.html">RAPPERS</a></li>
+          <li><a href="garally.html">GARALLY</a></li>
+          <li><a href="punch-line.html">PUNCH LINE</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li style="text-shadow: 0 0 10px #fff,0 0 15px #fff;"><a href="bonus.html">BONUS CONTENTS</a></li>
+        </ul>
+      </nav>
+
+      <nav class="gnav">
+        <ul class="gnav_wrapper">
+        <li><a href="about.html">ABOUT THIS SITE</a></li>
+        <li><a href="me.html">ABOUT ME</a></li>
+        <li><a href="rappers.html">RAPPERS</a></li>
+        <li><a href="garally.html">GARALLY</a></li>
+        <li><a href="punch-line.html">PUNCH LINE</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li style="text-shadow: 0 0 10px #fff,0 0 15px #fff;"><a href="bonus.html">BONUS CONTENTS</a></li>
+        </ul>
+      </nav>
+      
+    <div class="wrapper">
+        <div class="sentence">
+            <h2 class="MIX_title"><img src="./images/punch-line-images/punchline.png" class="PunchLineIcon" alt="">PUNCH LINE</h2>
+            <div class="explain">
+                <p>ここではパンチライン<span style="font-size: 11px;">※</span>を閲覧出来ます。</p>
+                <p style="font-size: 11px;">※印象的・衝撃的な歌詞を指す言葉。</p>
+            </div>
+        </div>
+
+        <div id="app">
+            <div class="searchBoxWrapper">
+                <input class="searchBox" type="text"placeholder="  検索" v-model="keyword">
+            </div>
+            
+            <div class="cardWrapper">
+                <div class="card" v-for="rapper in filteredRappers" :key="rapper.id">
+        
+                    <div class="icon" v-bind:data-micromodal-trigger="`modal-ArtistImg${rapper.id}`"><img style="width:100%;height:100%;object-fit:cover;" :src="rapper.rapperImg"></div>
+        
+                    <div class="micromodal-slide" v-bind:id="`modal-ArtistImg${rapper.id}`">
+                    <div style="z-index:2;" class="modal__overlay" data-micromodal-close>
+                        <div class="modal__container">
+                        <div class="modal__inner">
+                            <header class="modal__header"><button class="modal__close"data-micromodal-close></button></header>
+                            <main class="modal__content"><img class="sp-ArtistImg" :src="rapper.rapperImg"></main>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+        
+                    <span class="songName" v-text="rapper.song"></span>
+                    <div class="imgWrapper" v-bind:data-micromodal-trigger="`modal-AlbumImg${rapper.id}`"><img style="width:100%;height:100%;object-fit:cover;" :src="rapper.albumImg"></div>
+        
+                    <div class="micromodal-slide" v-bind:id="`modal-AlbumImg${rapper.id}`">
+                        <div style="z-index:2;" class="modal__overlay" data-micromodal-close>
+                        <div class="modal__container">
+                            <div class="modal__inner">
+                            <header class="modal__header"><button class="modal__close"data-micromodal-close></button></header>
+                            <main class="modal__content"><img class="sp-AlbumImg" :src="rapper.albumImg"></main>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+        
+                    <div class="article">
+                        <p style="padding-top: 55px;" v-text="rapper.name"></p>
+                        <p class="lyrics" v-text="rapper.lyrics"></p>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>   
+
+    <footer><p>copyright ©️ 2024 DJ NULL</p></footer>
+
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
+<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./JavaScript/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            keyword: '',
+            rappers: [
+                {
+                    id: 1,
+                    song:'Here is happiness',
+                    name: '神門',
+                    lyrics: '受け止めるにはだいぶかかる\nけど良かった俺にはマイクがある\n生きる理由は分からないが\n死ねない理由ならば沢山ある',
+                    rapperImg:'./images/punch-line-images/goudo.gif',
+                    albumImg:'./images/punch-line-images/kokoro.gif'
+                },
+                {
+                    id: 2,
+                    song:'Azalea',
+                    name: '神門',
+                    lyrics: 'ついに別れが訪れたけど\n自慢になんない俺に今日まで\n世界一だと思えたあなたを\n彼女と呼ばせてくれてありがとう',
+                    rapperImg:'./images/punch-line-images/goudo.gif',
+                    albumImg:'./images/punch-line-images/Azalea.gif'
+                },
+                {
+                    id: 3,
+                    song:'なら、こう生きよう',
+                    name: '神門',
+                    lyrics: '雨なら上がる だけどまた降る\n未完成ゆえに不安が邪魔する\n飛び込む勇気が道に変わる',
+                    rapperImg:'./images/punch-line-images/goudo.gif',
+                    albumImg:'./images/punch-line-images/narakouikiyou.gif'
+                },
+                {
+                    id: 4,
+                    song:'108bars',
+                    name: '小林勝行',
+                    lyrics: 'オカン 俺こんなんなる\n思わんかったわ\nごめんな、もお俺夢だけやねん\nドキドキするんは\n夢だけやねん',
+                    rapperImg:'./images/punch-line-images/kobayasi.gif',
+                    albumImg:'./images/punch-line-images/108bars.gif'
+                },
+                {
+                    id: 5,
+                    song:'オレヲダキシメロ',
+                    name: '小林勝行',
+                    lyrics: '俺は黒いペン\nただ単 自分のツレ\n白紙の上で 黒になって命をけずる\n俺は黒いペン\n今日、生きた正義残すねん',
+                    rapperImg:'./images/punch-line-images/kobayasi.gif',
+                    albumImg:'./images/punch-line-images/orewodakisimero.gif'
+                },
+                {
+                    id: 6,
+                    song:'get paid',
+                    name: 'KEIJU',
+                    lyrics: 'お金が一番 だったら寂しい\nあったかい家 良い先輩に 馬鹿な後輩\n俺たちの暮らし 先は見えない\nだけど止まらない\n2度と無い世界で生きて\n見て見たい物がある',
+                    rapperImg:'./images/punch-line-images/KEIJU.gif',
+                    albumImg:'./images/punch-line-images/getpaid.gif'
+                },
+                {
+                    id: 7,
+                    song:'奮闘中',
+                    name: 'chouji',
+                    lyrics: 'もうすぐ売れる予定の音楽家\nそう言い続けて13年\n泣いて泣いてラッパーになりてえ\n誰にも見せない涙が歌に\nこの瞬間、心が踊る',
+                    rapperImg:'./images/punch-line-images/chouji.gif',
+                    albumImg:'./images/punch-line-images/奮闘中.gif'
+                },
+                {
+                    id: 8,
+                    song:'Love Yourself',
+                    name: 'ZORN',
+                    lyrics: 'もう全てがどうでも良い 落ち込み超凹み\n心が折れそうに 酒でも持って来い\n死にかけてもまた生き返って\n全てを詩に変えて 起死回生',
+                    rapperImg:'./images/punch-line-images/ZORN.gif',
+                    albumImg:'./images/punch-line-images/LoveYourself.gif'
+                },
+                {
+                    id: 9,
+                    song:'いたいのとんでけ',
+                    name: 'ZORN',
+                    lyrics: '良い事は頑張っても無く\nやなことはただ待ってもある\nそれなら死にたいの悲鳴は\nそれでも生きたいと似ていた',
+                    rapperImg:'./images/punch-line-images/ZORN.gif',
+                    albumImg:'./images/punch-line-images/itainotondeke.gif'
+                },
+                {
+                    id: 10,
+                    song:'Lost',
+                    name: 'ZORN',
+                    lyrics: 'なぁこれが幸せか？\n虚しくなりに俺は来ただけか？\nこんなんじゃ文無しの方がマシ\n手にする事は無くす事だった\nこれから掴むどんなもんより\n最初に持ってたもんが尊い',
+                    rapperImg:'./images/punch-line-images/ZORN.gif',
+                    albumImg:'./images/punch-line-images/Lost.gif'
+                },
+                {
+                    id: 11,
+                    song:'Cheep Sunday',
+                    name: '唾奇',
+                    lyrics: '死ねる程病んだ\nアンサー馬鹿ばっか\n俺はラッパー 口を動かす\nラップしてなけりゃカス いや違うな\nラップしてるカス',
+                    rapperImg:'./images/punch-line-images/tubaki.gif',
+                    albumImg:'./images/punch-line-images/CheepSunday.gif'
+                },
+                {
+                    id: 12,
+                    song:'Heaven',
+                    name: 'ACE COOL',
+                    lyrics: '明日死んでも悔いは無い\n今魂を吹き込む\n音で繋がるyou and i\n届け 歌いたい\n溢れる言葉が止まらない',
+                    rapperImg:'./images/punch-line-images/ACECOOL.gif',
+                    albumImg:'./images/punch-line-images/Heaven.gif'
+                },
+                {
+                    id: 13,
+                    song:'DAY (feat. ACE COOL, YOUNG FREEZ, JOHNNY & RYO the SKYWALKER)',
+                    name: 'ACE COOL',
+                    lyrics: '今日が最後の日だとしても\nステージに向かう\n吐き出していく言葉 怒りと嘆き\n命は儚い 毎日が青春\nこの心臓が止まっても 声は死なない',
+                    rapperImg:'./images/punch-line-images/ACECOOL.gif',
+                    albumImg:'./images/punch-line-images/Day.gif'
+                },
+                {
+                    id: 14,
+                    song:'革命',
+                    name: 'MOROHA',
+                    lyrics: 'お前もほんとは気付いてるんだ\nシラフじゃ語れぬ夢は惨めだ\n現実は辛い 暗い 時に苦しい\nそれでも妄想よりは眩しい',
+                    rapperImg:'./images/punch-line-images/moroha.gif',
+                    albumImg:'./images/punch-line-images/morohaAlbum.gif'
+                },
+                {
+                    id: 15,
+                    song:'三文銭',
+                    name: 'MOROHA',
+                    lyrics: '噂によると夢は生き物で\n愚痴や言い訳で\nすぐに弱っちまうらしいんだ\n唯一の好物は可能性\n良かった\n俺やあんたも腐るほど持ってる',
+                    rapperImg:'./images/punch-line-images/moroha.gif',
+                    albumImg:'./images/punch-line-images/morohaAlbum.gif'
+                },
+                {
+                    id: 16,
+                    song:'何ひとつうしなわず',
+                    name: 'BRON-K',
+                    lyrics: 'Baby Thank you so much\n何ひとつうしなわず\n全て手に入れたいと\n思う事はわがままかい？',
+                    rapperImg:'./images/punch-line-images/BRON-K.gif',
+                    albumImg:'./images/punch-line-images/nanihitotu.gif'
+                },
+                {
+                    id: 17,
+                    song:'ME AGAINST THE WORLD feat.KARIBEL for MAJOR MUSIC',
+                    name: 'SEEDA',
+                    lyrics: '夢を否定されても\n絶対負けるな\n自分を曲げるな',
+                    rapperImg:'./images/punch-line-images/SEEDA.gif',
+                    albumImg:'./images/punch-line-images/MeAgainstTheWorld.gif'
+                },
+                {
+                    id: 18,
+                    song:'LIVIN',
+                    name: 'SEEDA',
+                    lyrics: '誰もが嘘つくせめて\n好きな人に俺は騙されていたい\n温もり求め家を探し\n刺激求め旅をする\n人は歩くだけ',
+                    rapperImg:'./images/punch-line-images/SEEDA.gif',
+                    albumImg:'./images/punch-line-images/LIVIN.gif'
+                },
+                {
+                    id: 19,
+                    song:'花と雨',
+                    name: 'SEEDA',
+                    lyrics: 'なあ神様だか何だか\n目に見えねぇが\n死ぬ程苦しんだら\n幸を与えてくれ',
+                    rapperImg:'./images/punch-line-images/SEEDA.gif',
+                    albumImg:'./images/punch-line-images/花と雨.gif'
+                },
+                {
+                    id: 20,
+                    song:'not(dead)',
+                    name: 'YDIZZY',
+                    lyrics: '奪われた自由\n奪い返す銃がマイク',
+                    rapperImg:'./images/punch-line-images/ydizzy.gif',
+                    albumImg:'./images/punch-line-images/ydizzyAlbum.gif'
+                },
+                {
+                    id: 21,
+                    song:'Time Alone',
+                    name: 'YDIZZY',
+                    lyrics: '今の辛い自分がいるから\nいつかの笑える自分がいる\n大事な物をポッケにしまい\n心で感じ日々を生きたい',
+                    rapperImg:'./images/punch-line-images/ydizzy.gif',
+                    albumImg:'./images/punch-line-images/ydizzyAlbum.gif'
+                },
+                {
+                    id: 22,
+                    song:'YOUR LANE feat.鋼田テフロン',
+                    name: 'AKLO',
+                    lyrics: '過去ってやつは消せない\nならばFutureてやつで攻めりゃ良い\nそのPain ハピネスで埋める工程\nなるべく早めに抜け出そうぜ',
+                    rapperImg:'./images/punch-line-images/AKLO.gif',
+                    albumImg:'./images/punch-line-images/YourLane.gif'
+                },
+            ]
+        },
+        computed: {
+            filteredRappers: function() {
+                return this.rappers.filter(function (el) {
+                    return ( el.song.indexOf(this.keyword) !== -1 ||
+                        el.name.indexOf(this.keyword) !== -1 ||
+                        el.lyrics.indexOf(this.keyword) !== -1 )                         
+                }, this)
+            }
+        },
+        watch: {
+            keyword: function () {
+                setTimeout(() => {
+                    this.init()
+                }, 100)
+            }
+        },
+        mounted() {
+            this.init()
+        },
+        methods: {
+            init() {
+                MicroModal.init({
+                    disableScroll: true,
+                    awaitOpenAnimation: true,
+                    awaitCloseAnimation: true
+                });
+                AOS.init({
+                    duration: 2000
+                });
+            }
+        }
+    });
+</script>
+</body>
+</html>
