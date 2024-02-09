@@ -219,7 +219,6 @@ main h1 {font-size:30px;}
   }
 
   html {
-    font-size: 62.5%;
     height: 100%;
     word-break: break-word;
     color: #333;
@@ -485,9 +484,6 @@ main h1 {font-size:30px;}
   }
 
   @media only screen and (max-width: 599px) {
-    html {
-      font-size: 50%;
-    }
     .pc-tab {
       display: none !important;
     }
