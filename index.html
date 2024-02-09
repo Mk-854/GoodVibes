@@ -1,19 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-      <meta char="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-      <title>GOOD VIBES</title>
-      <link rel="icon" href="images/favicon.ico">
-      <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
-      <link rel="stylesheet" href="./CSS/common.css">
-      <link rel="stylesheet" href="./CSS/index.css">
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-      <script src="https://kit.fontawesome.com/e5b586f23b.js" crossorigin="anonymous"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  </head>
+<head>
+<meta char="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>GOOD VIBES</title>
+<link rel="icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+<link rel="stylesheet" href="./CSS/common.css">
+<link rel="stylesheet" href="./CSS/index.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper@8/swiper.min.css">
+<script src="https://kit.fontawesome.com/e5b586f23b.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
   <body>
-      <div id="loader-bg">
+     <div id="loader-bg">
         <div id="loader">
           <div class="sk-cube-grid">
             <div class="sk-cube sk-cube1"></div>
@@ -28,7 +31,7 @@
           </div>
         </div>
       </div>
-      <div id="wrap">
+      <div id="wrap l-wrapper">
         <header class="header"><a href="index.html"><img src="./images/logo.png"></a></header>
           <div class="hamburger">
             <span></span>
@@ -59,9 +62,101 @@
           </nav>
 
           <main>
-            <div class="container">
-              <div class="haikei"></div>
-            </div>
+              <section id="video-area">
+                <video id="video" poster="./images/about.mp4" webkit-playsinline playsinline muted autoplay loop>
+                <source src="./images/about.mp4" type="video/mp4">
+                </video>
+                <div id="gradient-overlay"></div>
+      				</section>
+
+							<section id="demo02" class="card02 l-section">
+								<div class="l-inner">
+                  <h1 style="margin-bottom: 10px;">NEWS</h1>
+									<div class="swiper">
+										<div class="swiper-wrapper">
+											<a href="https://linkcloud.mu/0ad15807" class="swiper-slide">
+												<article class="slide">
+													<div class="slide-media img-cover"><img src="./images/KillZone.png" alt=""></div>
+													<div class="slide-content">
+														<time class="slide-date" datetime="2023-10-30">2023.10.30</time>
+														<h2 class="slide-title">DJ NULL、Dubzol名義で新曲「KillZone」をリリース</h2>
+													</div>
+												</article>
+											</a>
+											<a href="#" class="swiper-slide">
+												<article class="slide">
+													<div class="slide-media img-cover"><img src="./images/goodvibes-logo.png" alt=""></div>
+													<div class="slide-content">
+														<time class="slide-date" datetime="2021-12-07">2021.12.07</time>
+														<h2 class="slide-title">RECOMMENDを更新</h2>
+													</div>
+												</article>
+											</a>
+											<a href="#" class="swiper-slide">
+												<article class="slide">
+													<div class="slide-media img-cover"><img src="./images/goodvibes-logo.png" alt=""></div>
+													<div class="slide-content">
+														<time class="slide-date" datetime="2021-12-07">2021.12.07</time>
+														<h2 class="slide-title">CONTACTページを公開</h2>
+													</div>
+												</article>
+											</a>
+											<a href="#" class="swiper-slide">
+												<article class="slide">
+													<div class="slide-media img-cover"><img src="./images/goodvibes-logo.png" alt=""></div>
+													<div class="slide-content">
+														<time class="slide-date" datetime="2021-12-07">2021.12.07</time>
+														<h2 class="slide-title"></h2>
+													</div>
+												</article>
+											</a>
+											<a href="#" class="swiper-slide">
+												<article class="slide">
+													<div class="slide-media img-cover"><img src="./images/goodvibes-logo.png" alt=""></div>
+													<div class="slide-content">
+														<time class="slide-date" datetime="2021-12-01">2021.12.01</time>
+														<h2 class="slide-title"></h2>
+													</div>
+												</article>
+											</a>
+											<a href="#" class="swiper-slide">
+												<article class="slide">
+													<div class="slide-media img-cover"><img src="./images/goodvibes-logo.png" alt=""></div>
+													<div class="slide-content">
+														<time class="slide-date" datetime="2021-12-01">2021.12.01</time>
+														<h2 class="slide-title"></h2>
+													</div>
+												</article>
+											</a>
+											<a href="#" class="swiper-slide">
+												<article class="slide">
+													<div class="slide-media img-cover"><img src="./images/goodvibes-logo.png" alt=""></div>
+													<div class="slide-content">
+														<time class="slide-date" datetime="2021-12-01">2021.12.01</time>
+														<h2 class="slide-title"></h2>
+													</div>
+												</article>
+											</a>
+											<a href="#" class="swiper-slide">
+												<article class="slide">
+													<div class="slide-media img-cover"><img src="./images/goodvibes-logo.png" alt=""></div>
+													<div class="slide-content">
+														<time class="slide-date" datetime="2021-12-01">2021.12.01</time>
+														<h2 class="slide-title"></h2>
+													</div>
+												</article>
+											</a>
+										</div><!-- /swiper-wrapper -->
+
+										<div class="swiper-controller">
+											<div class="swiper-pagination"></div>
+											<div class="swiper-button-prev"></div>
+											<div class="swiper-button-next"></div>
+										</div>
+									</div><!-- /swiper -->
+
+								</div>
+							</section>
 
             <div class="cp_arrows">
               <div class="cp_arrow cp_arrowfirst"></div>
@@ -90,42 +185,49 @@
               </section>
             </section>
 
-            <section class="RecommendWrapper" data-aos="fade-up">
+            <section class="RecommendWrapper">
               <div class="background-color">
                 <div class="gradient-top"></div>
-                <h2 class="RecommendTitle"><i class="fa-solid fa-music"></i>RECOMMEND</h2>
-                <div class="explain">
-                  <p>ここでは最近リリースされた曲や<br class="sp">管理人おすすめの曲を紹介しています。</p>
-                  <p>音が流れますのでご注意下さい。</p>
-                </div>
-                <div class="Recommend">
-                  <iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/playlist/recommend/pl.u-BNA602Rt6KW6Dz"></iframe>
+                <div  data-aos="fade-up">
+                  <h2 class="RecommendTitle"><i class="fa-solid fa-music"></i>RECOMMEND</h2>
+                  <div class="explain">
+                    <p>ここでは最近リリースされた曲や<br class="sp">管理人おすすめの曲を紹介しています。</p>
+                    <p>音が流れますのでご注意下さい。</p>
+                  </div>
+                  <div class="Recommend">
+                    <iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/playlist/recommend/pl.u-BNA602Rt6KW6Dz"></iframe>
+                  </div>
                 </div>
                 <div class="gradient"></div>
               </div>
             </section>
-
-            <section class="news" data-aos="fade-up">
-              <div class="newslist_wrapper">
-                <div class="newslist">
-                  <h2>NEWS</h2>
-                  <ul>
-                    <li><span>2021-12-07</span>RECOMMENDを更新</li>
-                    <li><span>2021-12-07</span>BLOGページを公開</li>
-                    <li><span>2021-12-07</span>CONTACTページを公開</li>
-                    <li><span>2021-12-07</span>GARALLYページを公開</li>
-                    <li><span>2021-12-06</span>RAPPERSページを公開</li>
-                    <li><span>2021-12-03</span>ABOUT MEページを更新</li>
-                    <li><span>2021-12-03</span> ABOUT THIS SITEページを更新</li>
-                    <li><span>2021-12-03</span>HOMEページを更新</li>
-                  </ul>
-                </div>
-              </div>
-            </section>
+            
           </main>
           <footer><p>copyright ©️ 2024 DJ NULL</p></footer>
       </div>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script src="./JavaScript/index.js"></script>
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+      <script>
+        const mySwiper = new Swiper('.card02 .swiper', {
+          slidesPerView: 'auto',
+          spaceBetween: 16,
+          grabCursor: true,
+          pagination: {
+            el: '.card02 .swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.card02 .swiper-button-next',
+            prevEl: '.card02 .swiper-button-prev',
+          },
+          breakpoints: {
+            1025: {
+              spaceBetween: 32,
+            }
+          },
+        });
+      </script>
   </body>
+
 </html>
