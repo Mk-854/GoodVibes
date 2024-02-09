@@ -27,7 +27,7 @@ body {
 /* 共通ヘッダー */
 .header{
 	background-color: black;
-  height: 120px;
+  height: 90px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -37,7 +37,7 @@ body {
 header img{
 	float:left;
 	width: 320px;
-  margin: 20px 0 10px 20px;
+  margin: 5px 0 10px 10px;
 }
 
 @media all and (max-width: 670px) {
@@ -153,7 +153,7 @@ header img{
   background-color: #333;
   position: fixed;
   top: 0;
-  margin-top: 120px;
+  margin-top: 90px;
   z-index : 95;
 }
 .gnav_wrapper{
