@@ -160,12 +160,12 @@ header img{
     max-width: 980px;
     margin: auto;
     display: flex;
-		list-style: none;
+    list-style: none;
 }
 .gnav_wrapper li{
     border-left: #888 1px solid;
     text-align: center;
-    width: calc(100%/7);
+    width: calc(100%/6);
     transition: all  0.3s ease;
 }
 .gnav_wrapper li:last-child{border-right: #888 1px solid;}
