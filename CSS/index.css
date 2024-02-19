@@ -153,8 +153,7 @@ main {
 
 @media all and (max-width: 670px) {
 .container::after {height: 100%;}
-main h1 {font-size:30px;}
-
+	
 .HiphopMix iframe {
   height: 400px;
   width: 95%;
