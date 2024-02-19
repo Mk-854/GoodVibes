@@ -105,9 +105,7 @@ main {
 	100% {opacity: 0;}
 }
 
-.MIX_title{
-  font-size: 35px;
-}
+.MIX_title{font-size: 35px;}
 
 .MixsWrapper{
   text-align: center;
@@ -244,9 +242,7 @@ main {
     margin: 0;
   }
 
-  figure {
-    margin: 0;
-  }
+  figure {margin: 0;}
 
   p {
     margin: 0;
@@ -276,9 +272,7 @@ main {
     padding: 0;
   }
 
-  main {
-    display: block;
-  }
+  main {display: block;}
 
   .l-inner {
     position: relative;
