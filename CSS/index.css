@@ -14,22 +14,18 @@
   }
 
   @media all and (max-width: 670px) {
-    #gradient-overlay {
-    height: 40px;
-  }
+    #gradient-overlay {height: 40px;}
 }
 
 #video {width: 100%;}
 
 main {
-	background-color: white;
+  background-color: white;
   padding-top: 140px;
 }
 
 @media all and (max-width: 670px) {
-  main {
-    padding-top: 70px;
-  }
+  main {padding-top: 70px;}
 }
 
 .cp_arrows *, .cp_arrows *:before, .cp_arrows *:after {
